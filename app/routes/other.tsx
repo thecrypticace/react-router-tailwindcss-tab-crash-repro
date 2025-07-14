@@ -1,5 +1,5 @@
-import { Link } from "react-router";
-import type { Route } from "./+types/home";
+import { Link, redirect } from "react-router";
+import type { Route } from "./+types/other";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,13 +8,13 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
+export default function Other() {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div>
-        <h1>src/routes/Home.tsx</h1>
+        <h1>src/routes/Other.tsx</h1>
         <p>Minimal repro for TailwindCSS + DaisyUI issue</p>
-        <Link to="/other">Link to Other.tsx</Link>
+        <Link to="/">Link to Home.tsx</Link>
       </div>
     </main>
   );
