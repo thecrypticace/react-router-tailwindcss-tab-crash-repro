@@ -10,12 +10,12 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center pt-16 pb-4">
-      <div>
-        <h1>src/routes/Home.tsx</h1>
-        <p>Minimal repro for TailwindCSS + DaisyUI issue</p>
-        <Link to="/other">Link to Other.tsx</Link>
-      </div>
+    <main>
+      <h1>Cascade Layers Crasher</h1>
+      <p>
+        Open dev tools and delete the <strong>first</strong> stylesheet
+      </p>
+      <Link to="/other">Link to Other.tsx</Link>
     </main>
   );
 }

@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cascade Layers Crasher</title>
+    <style>
+      @layer base {
+        ::placeholder {
+          @supports (color: red) {
+            color: color-mix(in oklab, currentcolor 50%, transparent);
+          }
+        }
+        @property --some-prop {
+          syntax: "<percentage>";
+          inherits: true;
+          initial-value: 0%;
+        }
+      }
+    </style>
+    <style>
+      @layer base {
+        ::placeholder {
+          @supports (color: red) {
+            color: color-mix(in oklab, currentcolor 50%, transparent);
+          }
+        }
+        @property --some-prop {
+          syntax: "<percentage>";
+          inherits: true;
+          initial-value: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cascade Layers Crasher</h1>
+    <p>Open dev tools and delete the <strong>first</strong> stylesheet</p>
+  </body>
+</html>
